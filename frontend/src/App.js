@@ -2,8 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import API_URL from './config';
 
-import Home from './components/Home';
-import Header from './components/Header';
+// src/App.js
+import './App.css';
+
+
+import Home from './pages/Home';
+import Project from './pages/Project';
 
 function App() {
   const [message, setMessage] = useState('');
@@ -17,9 +21,9 @@ function App() {
 
   return (
     <Router>
-      <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/projects" element={<Project />} />
       </Routes>
     </Router>
   );

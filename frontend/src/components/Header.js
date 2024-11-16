@@ -1,6 +1,6 @@
 // frontend/src/components/Header.js
 import React from 'react';
-import './Header.scss';
+import '../App.css';
 
 
 const Header = () => {
