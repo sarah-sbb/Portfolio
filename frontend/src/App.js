@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import API_URL from './config';
+
+import Home from './components/Home';
+import Header from './components/Header';
 
 function App() {
   const [message, setMessage] = useState('');
@@ -12,10 +16,12 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <h1>Mon Portfolio</h1>
-      <p>{message}</p>
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 
