@@ -7,4 +7,4 @@ const WorkSchema = new mongoose.Schema({
   image: { type: String, required: true },  // URL de l'image
 });
 
-module.exports = mongoose.model('Work', WorkSchema);
+module.exports = mongoose.model('works', WorkSchema);
